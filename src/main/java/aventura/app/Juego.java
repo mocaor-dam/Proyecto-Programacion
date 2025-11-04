@@ -12,25 +12,27 @@ public class Juego {
     // --- NÚCLEO: Definición de Datos (FASE 1) ---
     // Esta parte os la damos HECHA. Es el "contrato" del núcleo.
 
-    private static String descripcionJuego = "No sabes qué ha pasado. Justo cuando terminabas las clases te quedaste el último como siempre recogiendo tus cosas. " +
-            "Pero algo pasó. Lo último que recuerdas es que sentiste mucho frío y todo se volvió oscuro. Ahora estás en tu clase, pero es de noche y el instituto está cerrado." +
-            "¿Nadie te ha visto? ¿Por qué las limpiadoras no te han despertado?";
+    private static String descripcionJuego = "Estás en tu apartamento. Son las 10 de la mañana, pero todo está sumido en una oscuridad extraña, como si el sol nunca hubiera salido. " +
+            "Sientes un frío en el aire, algo fuera de lugar. Te acercas a la ventana y miras afuera. La calle está vacía... pero hay figuras moviéndose lentamente, con movimientos torpes, sin rumbo ni sentido, como si no tuvieran conciencia. Sus ojos parecen vacíos, y un silencio inquietante cubre todo. " +
+            "Un escalofrío recorre tu espalda, pero intentas convencerte de que es una especie de tormenta o un apagón. Te preparas para salir y asistir a tu clase de programación, pero algo dentro de ti dice que hoy no será un día normal.\n" +
+            "Mientras apagas la luz y agarras tu mochila, percibes un leve susurro que parece venir de las paredes. No sabes si es tu imaginación o si algo más está allí, acechando.\n";
+
 
     // El mapa de habitaciones.
     // TODO: (Skin) ¡Rellenad esto con vuestras descripciones!
     private static String[] habitaciones = {
-            "Estás en tu aula, el aula 103. Hay una puerta a la DERECHA.",  // Posición 0
-            "Estás en el pasillo principal. Hay puertas a la DERECHA y a la IZQUIDA.", // Posición 1
-            "Estás en el aula 105. Hay una puerta a la IZQUIERDA y has visto una 'llave' en una mesa.", // Posición 2
+            "Estás en tu apartamento, el 100. Puedes salir por la puerta a la DERECHA.",  // Posición 0
+            "Estás en el pasillo . Hay puertas a la DERECHA y a la IZQUIERDA. Los apartamentos 101 y 102. ", // Posición 1
+            "Estás en el apartamento 101. Hay una 'llave' en una mesa, y escuchas un ruido extraño debajo de la mesa, miras y ves una antigua 'radio'.", // Posición 2
             // Borra las habitaciones y escribe las tuyas
     };
 
     // Los objetos que hay en cada habitación.
     // TODO: (Skin) Rellenad esto con vuestros objetos
     private static String[][] objetosMapa = {
-            {null, null},           // Objetos en Habitación 0
-            {null, null},           // Objetos en Habitación 1
-            {"llave", "nota"},      // Objetos en Habitación 2
+            {"linterna", null},           // Objetos en Apartamento 100
+            {"llave", "radio"},      // Objetos en Apartamento 101
+            {null, null},           // Objetos en Apartamento 102
     };
 
     // El inventario del jugador. Tamaño fijo.
