@@ -68,39 +68,12 @@ public class Juego {
             System.out.println("Introduce que quieres hacer:  ");
             String comando = scanner.nextLine().toLowerCase();
             switch (comando){
-                case "ayuda":
-                    mostrarAyuda();
-                    break;
-                case "mirar":
-                    mostrarInfoHabitacion();
-                    break;
-                case "inventario":
-                    mostrarInventario();
-                    break;
 
                 case "ir derecha":
                     irDerecha(); // Llama al metodo de movimiento implementado
                     break;
-
-                case "ir izquierda":
-                    irIzquierda(); // Llama al metodo de movimiento opuesto (A implementar)
-                    break;
-
-                case "salir":
-                    jugando = false;
-                    break;
-
-                default:
-                    // Manejo de comandos complejos como 'coger [objeto]'
-                    if (comando.startsWith("coger ")) {
-                        String objeto = comando.substring(6).trim();
-                        procesarComandoCoger(objeto);
-                    } else {
-                        System.out.println("Comando no reconocido. Escribe 'ayuda' para ver las opciones.");
-                    }
-                    break;
             }
-            }
+
 
 
             /*
@@ -118,7 +91,7 @@ public class Juego {
         scanner.close();
     }
 
-    public static String[] irDerecha(String[] derecha){
+    public static void irDerecha(){
 
         if (habitacionActual < habitaciones.length -1){
             //Aumentamos la posicion actual
@@ -126,7 +99,6 @@ public class Juego {
             System.out.println("Te mueves a la derecha..");
             System.out.println(Arrays.toString(habitaciones));
         }
-        return derecha;
     }
 
     /*
