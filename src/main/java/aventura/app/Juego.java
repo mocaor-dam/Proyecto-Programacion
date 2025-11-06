@@ -1,5 +1,6 @@
 package aventura.app;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -74,10 +75,22 @@ public class Juego {
              */
 
 
+
         }
 
         System.out.println("¡Gracias por jugar!");
         scanner.close();
+    }
+
+    public static String[] irDerecha(String[] derecha){
+
+        if (habitacionActual < habitaciones.length -1){
+            //Aumentamos la posicion actual
+            habitacionActual++;
+            System.out.println("Te mueves a la derecha..");
+            System.out.println(Arrays.toString(habitaciones));
+        }
+        return derecha;
     }
 
     /*
