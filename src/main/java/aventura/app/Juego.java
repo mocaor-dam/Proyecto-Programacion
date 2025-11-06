@@ -71,6 +71,13 @@ public class Juego {
              Debe gestionar como mínimo: "ayuda", "mirar", "inventario",
              "ir derecha", "ir izquierda", "coger [objeto]" y "salir".
              */
+            public static String[] irDerecha(String[]){
+               String[] irDerecha = new String[3];
+               if ()
+            for (int i = 0; i < ; i++) {
+
+            }
+            }
 
 
         }
