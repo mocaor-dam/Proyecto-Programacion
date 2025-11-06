@@ -53,6 +53,7 @@ public class Juego {
         System.out.println("------------------------------------------");
 
         // TODO 1a: Muestra la descripción general del juego
+        System.out.println("Hola Bienvenido a The Blackout, un juego realizado por Moises y Victor, espero que disfrutes");
 
         // TODO 1b: Muestra la descripción de la primera habitación
         // Pista: System.out.println(habitaciones[...]);
