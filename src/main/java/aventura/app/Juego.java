@@ -65,7 +65,16 @@ public class Juego {
 
             // TODO 3: Leer el comando del usuario por teclado
             System.out.print("\n> ");
-            String comando = scanner.nextLine();
+            System.out.println("Introduce que quieres hacer:  ");
+            String comando = scanner.nextLine().toLowerCase();
+            switch (comando){
+
+                case "ir derecha":
+                    irDerecha(); // Llama al metodo de movimiento implementado
+                    break;
+            }
+
+
 
             /*
             TODO 4: Crear un 'switch' o una estructura 'if-else if'
@@ -82,7 +91,7 @@ public class Juego {
         scanner.close();
     }
 
-    public static String[] irDerecha(String[] derecha){
+    public static void irDerecha(){
 
         if (habitacionActual < habitaciones.length -1){
             //Aumentamos la posicion actual
@@ -90,7 +99,6 @@ public class Juego {
             System.out.println("Te mueves a la derecha..");
             System.out.println(Arrays.toString(habitaciones));
         }
-        return derecha;
     }
 
     /*
