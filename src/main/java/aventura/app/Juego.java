@@ -1,5 +1,6 @@
 package aventura.app;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -72,19 +73,24 @@ public class Juego {
              Debe gestionar como mínimo: "ayuda", "mirar", "inventario",
              "ir derecha", "ir izquierda", "coger [objeto]" y "salir".
              */
-            public static String[] irDerecha(String[]){
-               String[] irDerecha = new String[3];
-               if ()
-            for (int i = 0; i < ; i++) {
 
-            }
-            }
 
 
         }
 
         System.out.println("¡Gracias por jugar!");
         scanner.close();
+    }
+
+    public static String[] irDerecha(String[] derecha){
+
+        if (habitacionActual < habitaciones.length -1){
+            //Aumentamos la posicion actual
+            habitacionActual++;
+            System.out.println("Te mueves a la derecha..");
+            System.out.println(Arrays.toString(habitaciones));
+        }
+        return derecha;
     }
 
     /*
