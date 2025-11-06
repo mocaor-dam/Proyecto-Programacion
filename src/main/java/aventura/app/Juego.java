@@ -65,7 +65,43 @@ public class Juego {
 
             // TODO 3: Leer el comando del usuario por teclado
             System.out.print("\n> ");
-            String comando = scanner.nextLine();
+            System.out.println("Introduce que quieres hacer:  ");
+            String comando = scanner.nextLine().toLowerCase();
+            switch (comando){
+                case "ayuda":
+                    mostrarAyuda();
+                    break;
+                case "mirar":
+                    mostrarInfoHabitacion();
+                    break;
+                case "inventario":
+                    mostrarInventario();
+                    break;
+
+                case "ir derecha":
+                    irDerecha(); // Llama al metodo de movimiento implementado
+                    break;
+
+                case "ir izquierda":
+                    irIzquierda(); // Llama al metodo de movimiento opuesto (A implementar)
+                    break;
+
+                case "salir":
+                    jugando = false;
+                    break;
+
+                default:
+                    // Manejo de comandos complejos como 'coger [objeto]'
+                    if (comando.startsWith("coger ")) {
+                        String objeto = comando.substring(6).trim();
+                        procesarComandoCoger(objeto);
+                    } else {
+                        System.out.println("Comando no reconocido. Escribe 'ayuda' para ver las opciones.");
+                    }
+                    break;
+            }
+            }
+
 
             /*
             TODO 4: Crear un 'switch' o una estructura 'if-else if'
