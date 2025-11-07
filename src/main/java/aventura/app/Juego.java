@@ -23,10 +23,9 @@ public class Juego {
     // El mapa de habitaciones.
     // TODO: (Skin) ¡Rellenad esto con vuestras descripciones!
     private static String[] habitaciones = {
-            "Estás en tu apartamento, el 100. Puedes salir por la puerta a la DERECHA.",  // Posición 0
-            "Estás en el pasillo . Hay puertas a la DERECHA y a la IZQUIERDA. Los apartamentos 101 y 102. ", // Posición 1
-            "Estás en el apartamento 101. Hay una 'llave' en una mesa, y escuchas un ruido extraño debajo de la mesa, miras y ves una antigua 'radio'.", // Posición 2
-            "Estás en el apartamento 102. Hay un cofre con una cerradura para una llave. \n escuchas que la radio empieza a hacer ruidos extraños... \n ¨MHASDAMDmasndb...¨ Es ilegible.." //Posición 3
+            "Estás en el apartamento 101. Hay una 'llave' en una mesa, y escuchas un ruido extraño debajo de la mesa, miras y ves una antigua 'radio'.", // Posición 1
+            "Estás en tu apartamento, el 100. Hay puertas a la DERECHA y a la IZQUIERDA. Los apartamentos 101 y 102.",  // Posición 0
+            "Estás en el apartamento 102. Hay un cofre con una cerradura para una llave. \n escuchas que la radio empieza a hacer ruidos extraños... \n ¨MHASDAMDmasndb...¨ Es ilegible.." //Posición 2
 
     };
 
@@ -34,7 +33,6 @@ public class Juego {
     // TODO: (Skin) Rellenad esto con vuestros objetos
     private static String[][] objetosMapa = {
             {"linterna", null},        // Objetos en Apartamento 100
-            {null, null},             //Objetos de Pasillo
             {"llave", "radio"},      // Objetos en Apartamento 101
             {null, null},           // Objetos en Apartamento 102
     };
@@ -43,7 +41,8 @@ public class Juego {
     private static String[] inventario = new String[5];
 
     // Variable que guarda la posición actual del jugador
-    private static int habitacionActual = 0; // Empezamos en la primera habitación
+    private static int habitacionActual = 1; // Empezamos en la primera habitación
+
 
     // --- FIN DE LA DEFINICIÓN DE DATOS ---
 
@@ -61,7 +60,7 @@ public class Juego {
         System.out.println(descripcionJuego);
         // TODO 1b: Muestra la descripción de la primera habitación
         // Pista: System.out.println(habitaciones[...]);
-        System.out.println(habitaciones[0]);
+        System.out.println(habitaciones[habitacionActual]);
 
         // TODO 2: Iniciar el bucle principal del juego (game loop)
         while (jugando) {
@@ -123,14 +122,12 @@ public class Juego {
     }
 
     public static void irDerecha() {
-        if (habitacionActual < habitaciones.length - 1){
-
+        if (habitacionActual < habitaciones.length - 1) {
             //Aumentamos la posicion actual
             habitacionActual++;
             System.out.println("Te mueves a la derecha..");
             System.out.println(habitaciones[habitacionActual]);
-        }
-        else {
+        } else {
             System.out.println("No puedes ir mas a la derecha, hay una pared.");
         }
     }
