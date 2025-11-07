@@ -70,10 +70,13 @@ public class Juego {
             String comando = scanner.nextLine().toLowerCase();
             switch (comando){
 
+
                 case "ir derecha":
                     irDerecha(); // Llama al metodo de movimiento implementado
                     break;
-
+                case "ir izquierda":
+                irIzquierda(); // Llama al metodo de moverse a la izquierda
+                    break;
             }
 
 
@@ -94,9 +97,7 @@ public class Juego {
     }
 
     public static void irDerecha(){
-        if (){
 
-        }
         if (habitacionActual < habitaciones.length -1){
             //Aumentamos la posicion actual
             habitacionActual++;
@@ -105,11 +106,13 @@ public class Juego {
         }
     }
     public static void irIzquierda(){
-        if (){
-
+        if (habitacionActual==0){
+            System.out.println("Ves la ventana que da a la calle");
         }
         if (habitacionActual<habitaciones.length -1){
-
+            habitacionActual++;
+            System.out.println("Te mueves a la izquierda");
+            System.out.println(Arrays.toString(habitaciones));
         }
     }
 
