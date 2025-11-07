@@ -1,6 +1,5 @@
 package aventura.app;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
