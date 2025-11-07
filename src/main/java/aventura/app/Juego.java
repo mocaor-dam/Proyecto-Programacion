@@ -32,7 +32,6 @@ public class Juego {
     // TODO: (Skin) Rellenad esto con vuestros objetos
     private static String[][] objetosMapa = {
             {"linterna", null},        // Objetos en Apartamento 100
-            {null, null},             //Objetos de Pasillo
             {"llave", "radio"},      // Objetos en Apartamento 101
             {null, null},           // Objetos en Apartamento 102
     };
@@ -156,4 +155,5 @@ public class Juego {
     private static void procesarComandoCoger(String comando) { ... }
     private static void mostrarInfoHabitacion() { ... }
     */
+
 }
