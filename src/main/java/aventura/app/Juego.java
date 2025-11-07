@@ -151,17 +151,24 @@ public class Juego {
     }
 
     public static void irIzquierda(){
-        if (habitacionActual==0){
-            System.out.println("No puedes ir más a la izquierda");
-            return;
-        }
-       if (){
-
-       }
-        if (habitacionActual<habitaciones.length -1){
-            habitacionActual++;
+        if (habitacionActual==1){
+            habitacionActual--;
             System.out.println("Te mueves a la izquierda");
             System.out.println(Arrays.toString(habitaciones));
+            return;
+        }
+       if (habitacionActual==2){
+           habitacionActual--;
+           System.out.println("Te mueves a la izquierda");
+           System.out.println(Arrays.toString(habitaciones));
+           return;
+       }
+
+        if (habitacionActual==0){
+            habitacionActual=habitacionActual+2;
+            System.out.println("Te mueves a la izquierda");
+            System.out.println(Arrays.toString(habitaciones));
+            return;
         }
     }
 
