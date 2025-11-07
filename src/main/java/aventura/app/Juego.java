@@ -26,13 +26,15 @@ public class Juego {
             "Estás en tu apartamento, el 100. Puedes salir por la puerta a la DERECHA.",  // Posición 0
             "Estás en el pasillo . Hay puertas a la DERECHA y a la IZQUIERDA. Los apartamentos 101 y 102. ", // Posición 1
             "Estás en el apartamento 101. Hay una 'llave' en una mesa, y escuchas un ruido extraño debajo de la mesa, miras y ves una antigua 'radio'.", // Posición 2
-            // Borra las habitaciones y escribe las tuyas
+            "Estás en el apartamento 102. Hay un cofre con una cerradura para una llave. \n escuchas que la radio empieza a hacer ruidos extraños... \n ¨MHASDAMDmasndb...¨ Es ilegible.." //Posición 3
+
     };
 
     // Los objetos que hay en cada habitación.
     // TODO: (Skin) Rellenad esto con vuestros objetos
     private static String[][] objetosMapa = {
-            {"linterna", null},           // Objetos en Apartamento 100
+            {"linterna", null},        // Objetos en Apartamento 100
+            {null, null},             //Objetos de Pasillo
             {"llave", "radio"},      // Objetos en Apartamento 101
             {null, null},           // Objetos en Apartamento 102
     };
@@ -68,14 +70,38 @@ public class Juego {
             System.out.print("\n> ");
             System.out.println("Introduce que quieres hacer:  ");
             String comando = scanner.nextLine().toLowerCase();
-            switch (comando){
+            switch (comando) {
 
+                case "ayuda":
+                    System.out.println("Comandos disponibles: 'ir derecha', 'ir izquierda', 'mirar', 'inventario', 'coger [objeto]', 'salir'.");
+                    break;
 
                 case "ir derecha":
                     irDerecha(); // Llama al metodo de movimiento implementado
                     break;
                 case "ir izquierda":
                 irIzquierda(); // Llama al metodo de moverse a la izquierda
+                    break;
+
+                case "mirar":
+                    mirarHabitacion();
+                    break;
+                case "inventario":
+                    //TODO: Aqui va el metodo de inventario
+                    break;
+                case "salir":
+                    jugando = false;
+                    break;
+
+                default:
+                    // Manejo de comandos complejos como 'coger llave'
+                    if (comando.startsWith("coger ")) {
+                        // TODO: Aquí va la lógica para coger objetos
+                        String objeto = comando.substring(6); // Obtiene lo que está después de "coger "
+                        System.out.println("Intentas coger: " + objeto + " (TODO: Implementar lógica)");
+                    } else {
+                        System.out.println("Comando no reconocido. Escribe 'ayuda' para ver las opciones.");
+                    }
                     break;
             }
 
@@ -96,15 +122,37 @@ public class Juego {
         scanner.close();
     }
 
-    public static void irDerecha(){
+    public static void irDerecha() {
+        if (habitacionActual < habitaciones.length - 1){
 
-        if (habitacionActual < habitaciones.length -1){
             //Aumentamos la posicion actual
             habitacionActual++;
             System.out.println("Te mueves a la derecha..");
-            System.out.println(Arrays.toString(habitaciones));
+            System.out.println(habitaciones[habitacionActual]);
+        }
+        else {
+            System.out.println("No puedes ir mas a la derecha, hay una pared.");
         }
     }
+
+    public static void mirarHabitacion() {
+        System.out.println("\n" + habitaciones[habitacionActual]);
+
+        //Mostrar los objetos
+        System.out.println("Ves: ");
+        boolean hayObjetos = false;
+        for (String objeto : objetosMapa[habitacionActual]) {
+            if (objeto != null) {
+                System.out.println(objeto);
+                hayObjetos = true;
+            }
+        }
+        if (!hayObjetos) {
+            System.out.println("No hay objetos en esta habitacion.");
+        }
+        System.out.println();
+    }
+
     public static void irIzquierda(){
         if (habitacionActual==0){
             System.out.println("Ves la ventana que da a la calle");
@@ -120,7 +168,6 @@ public class Juego {
             System.out.println(Arrays.toString(habitaciones));
         }
     }
-
 
     /*
     (Opcional - Buenas Prácticas)
