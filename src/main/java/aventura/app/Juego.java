@@ -43,6 +43,16 @@ public class Juego {
 
     // Variable que guarda la posición actual del jugador
     private static int habitacionActual = 0; // Empezamos en la primera habitación
+    private static int[][] conexionesMapa = {
+            // Habitación 0 (Apartamento 100)
+            {-1, 1},
+            // Habitación 1 (Pasillo)
+            {2, 3},
+            // Habitación 2 (Apartamento 101 - Izquierda desde Pasillo)
+            {1, -1},
+            // Habitación 3 (Apartamento 102 - Derecha desde Pasillo)
+            {-1, 1}
+    };
 
     // --- FIN DE LA DEFINICIÓN DE DATOS ---
 
@@ -121,15 +131,15 @@ public class Juego {
     }
 
     public static void irDerecha() {
-        if (habitacionActual < habitaciones.length - 1){
+        // Usamos el índice 1 para 'DERECHA'
+        int habitacionDestino = conexionesMapa[habitacionActual][1];
 
-            //Aumentamos la posicion actual
-            habitacionActual++;
-            System.out.println("Te mueves a la derecha..");
+        if (habitacionDestino != -1) {
+            habitacionActual = habitacionDestino;
+            System.out.println("Te mueves a la derecha...");
             System.out.println(habitaciones[habitacionActual]);
-        }
-        else {
-            System.out.println("No puedes ir mas a la derecha, hay una pared.");
+        } else {
+            System.out.println("No puedes ir más a la derecha, hay una pared.");
         }
     }
 
