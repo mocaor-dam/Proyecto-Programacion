@@ -155,13 +155,12 @@ public class Juego {
 
     public static void irIzquierda(){
         if (habitacionActual==0){
-            System.out.println("Ves la ventana que da a la calle");
+            System.out.println("No puedes ir más a la izquierda");
             return;
         }
-        if (habitacionActual==3){
-            System.out.println("Ves una pared");
-            return;
-        }
+       if (){
+
+       }
         if (habitacionActual<habitaciones.length -1){
             habitacionActual++;
             System.out.println("Te mueves a la izquierda");
