@@ -149,28 +149,15 @@ public class Juego {
         System.out.println();
     }
 
-    /*
-    En este método irá a la habitación que esté a la izquierda no importe el lugar siempre que se introduzca el comando
-     */
+    // En este método irá a la habitación que esté a la izquierda
     public static void irIzquierda(){
         if (habitacionActual==1){
             habitacionActual--;
             System.out.println("Te mueves a la izquierda");
             System.out.println(habitaciones[habitacionActual]);
             return;
-        }
-       if (habitacionActual==2){
-           habitacionActual--;
-           System.out.println("Te mueves a la izquierda");
-           System.out.println(habitaciones[habitacionActual]);
-           return;
-       }
-
-        if (habitacionActual==0){
-            habitacionActual=habitacionActual+2;
-            System.out.println("Te mueves a la izquierda");
-            System.out.println(habitaciones[habitacionActual]);
-            return;
+        } else {
+            System.out.println("No puedes ir a la izquierda, hay una pared");
         }
     }
 
