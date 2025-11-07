@@ -128,6 +128,23 @@ public class Juego {
             System.out.println(Arrays.toString(habitaciones));
         }
     }
+    public static void mirarHabitacion(){
+        System.out.println("\n" + habitaciones[habitacionActual]);
+
+        //Mostrar los objetos
+        System.out.println("Ves: ");
+        boolean hayObjetos = false;
+        for (String objeto : objetosMapa[habitacionActual]){
+            if (objeto != null){
+                System.out.println(objeto);
+                hayObjetos = true;
+            }
+        }
+        if (!hayObjetos){
+            System.out.println("No hay objetos en esta habitacion.");
+        }
+        System.out.println();
+    }
 
     /*
     (Opcional - Buenas Prácticas)
