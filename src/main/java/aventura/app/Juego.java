@@ -81,7 +81,7 @@ public class Juego {
                     System.out.println("No disponible por el momento");
                     break;
                 case "mirar":
-                    //TODO: Aqui va el metodo de mostrar la informacion de la habitacion
+                    mirarHabitacion();
                     break;
                 case "inventario":
                     //TODO: Aqui va el metodo de inventario
@@ -127,6 +127,23 @@ public class Juego {
             System.out.println("Te mueves a la derecha..");
             System.out.println(Arrays.toString(habitaciones));
         }
+    }
+    public static void mirarHabitacion(){
+        System.out.println("\n" + habitaciones[habitacionActual]);
+
+        //Mostrar los objetos
+        System.out.println("Ves: ");
+        boolean hayObjetos = false;
+        for (String objeto : objetosMapa[habitacionActual]){
+            if (objeto != null){
+                System.out.println(objeto);
+                hayObjetos = true;
+            }
+        }
+        if (!hayObjetos){
+            System.out.println("No hay objetos en esta habitacion.");
+        }
+        System.out.println();
     }
 
     /*
