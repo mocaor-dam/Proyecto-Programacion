@@ -69,8 +69,36 @@ public class Juego {
             String comando = scanner.nextLine().toLowerCase();
             switch (comando){
 
+                case "ayuda":
+                    System.out.println("Comandos disponibles: 'ir derecha', 'ir izquierda', 'mirar', 'inventario', 'coger [objeto]', 'salir'.");
+                    break;
+
                 case "ir derecha":
                     irDerecha(); // Llama al metodo de movimiento implementado
+                    break;
+                case "ir izquierda":
+                    //TODO: Aqui tiene que ir el metodo de ir izquierda
+                    System.out.println("No disponible por el momento");
+                    break;
+                case "mirar":
+                    mirarHabitacion();
+                    break;
+                case "inventario":
+                    //TODO: Aqui va el metodo de inventario
+                    break;
+                case "salir":
+                    jugando = false;
+                    break;
+
+                default:
+                    // Manejo de comandos complejos como 'coger llave'
+                    if (comando.startsWith("coger ")) {
+                        // TODO: Aquí va la lógica para coger objetos
+                        String objeto = comando.substring(6); // Obtiene lo que está después de "coger "
+                        System.out.println("Intentas coger: " + objeto + " (TODO: Implementar lógica)");
+                    } else {
+                        System.out.println("Comando no reconocido. Escribe 'ayuda' para ver las opciones.");
+                    }
                     break;
             }
 
@@ -102,6 +130,23 @@ public class Juego {
         else {
             System.out.println("No puedes ir mas a la derecha, hay una pared.");
         }
+    }
+    public static void mirarHabitacion(){
+        System.out.println("\n" + habitaciones[habitacionActual]);
+
+        //Mostrar los objetos
+        System.out.println("Ves: ");
+        boolean hayObjetos = false;
+        for (String objeto : objetosMapa[habitacionActual]){
+            if (objeto != null){
+                System.out.println(objeto);
+                hayObjetos = true;
+            }
+        }
+        if (!hayObjetos){
+            System.out.println("No hay objetos en esta habitacion.");
+        }
+        System.out.println();
     }
 
     /*
