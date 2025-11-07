@@ -81,7 +81,7 @@ public class Juego {
                     System.out.println("No disponible por el momento");
                     break;
                 case "mirar":
-                    //TODO: Aqui va el metodo de mostrar la informacion de la habitacion
+                    mirarHabitacion();
                     break;
                 case "inventario":
                     //TODO: Aqui va el metodo de inventario
