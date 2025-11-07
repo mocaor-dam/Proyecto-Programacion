@@ -99,6 +99,9 @@ public class Juego {
             System.out.println("Te mueves a la derecha..");
             System.out.println(Arrays.toString(habitaciones));
         }
+        else {
+            System.out.println("No puedes ir mas a la derecha, hay una pared.");
+        }
     }
 
     /*
