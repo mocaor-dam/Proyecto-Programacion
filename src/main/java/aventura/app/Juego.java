@@ -1,5 +1,6 @@
 package aventura.app;
 
+import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -30,10 +31,9 @@ public class Juego {
     };
 
     // Los objetos que hay en cada habitación.
-    // TODO: (Skin) Rellenad esto con vuestros objetos
     private static String[][] objetosMapa = {
-            {"linterna", null},        // Objetos en Apartamento 100
             {"llave", "radio"},      // Objetos en Apartamento 101
+            {"linterna", null},        // Objetos en Apartamento 100
             {null, null},           // Objetos en Apartamento 102
     };
 
@@ -72,7 +72,9 @@ public class Juego {
             switch (comando) {
 
                 case "ayuda":
-                    System.out.println("Comandos disponibles: 'ir derecha', 'ir izquierda', 'mirar', 'inventario', 'coger [objeto]', 'salir'.");
+                    System.out.println("======================AYUDA======================");
+                    System.out.println("Comandos disponibles: \n - ir derecha \n - ir izquierda \n - mirar \n - inventario \n - coger [objeto] \n - salir");
+                    System.out.println("=================================================");
                     break;
 
                 case "ir derecha":
@@ -107,7 +109,7 @@ public class Juego {
 
 
             /*
-            TODO 4: Crear un 'switch' o una estructura 'if-else if'
+             4: Crear un 'switch' o una estructura 'if-else if'
              para procesar el 'comando' del usuario.
              Debe gestionar como mínimo: "ayuda", "mirar", "inventario",
              "ir derecha", "ir izquierda", "coger [objeto]" y "salir".
