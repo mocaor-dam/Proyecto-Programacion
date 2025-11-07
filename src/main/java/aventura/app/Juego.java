@@ -121,11 +121,11 @@ public class Juego {
 
     public static void irDerecha(){
 
-        if (habitacionActual < habitaciones.length -1){
+        if (habitacionActual < habitaciones.length - 1){
             //Aumentamos la posicion actual
             habitacionActual++;
             System.out.println("Te mueves a la derecha..");
-            System.out.println(Arrays.toString(habitaciones));
+            System.out.println(habitaciones[habitacionActual]);
         }
         else {
             System.out.println("No puedes ir mas a la derecha, hay una pared.");
