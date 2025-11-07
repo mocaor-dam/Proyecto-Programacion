@@ -13,6 +13,7 @@ public class Juego {
     // --- NÚCLEO: Definición de Datos (FASE 1) ---
     // Esta parte os la damos HECHA. Es el "contrato" del núcleo.
 
+
     private static String descripcionJuego = "Estás en tu apartamento. Son las 10 de la mañana, pero todo está sumido en una oscuridad extraña, como si el sol nunca hubiera salido. " +
             "Sientes un frío en el aire, algo fuera de lugar. Te acercas a la ventana y miras afuera. La calle está vacía... pero hay figuras moviéndose lentamente, con movimientos torpes, sin rumbo ni sentido, como si no tuvieran conciencia. Sus ojos parecen vacíos, y un silencio inquietante cubre todo. " +
             "Un escalofrío recorre tu espalda, pero intentas convencerte de que es una especie de tormenta o un apagón. Te preparas para salir y asistir a tu clase de programación, pero algo dentro de ti dice que hoy no será un día normal.\n" +
@@ -78,9 +79,9 @@ public class Juego {
                     irDerecha(); // Llama al metodo de movimiento implementado
                     break;
                 case "ir izquierda":
-                    //TODO: Aqui tiene que ir el metodo de ir izquierda
-                    System.out.println("No disponible por el momento");
+                irIzquierda(); // Llama al metodo de moverse a la izquierda
                     break;
+
                 case "mirar":
                     mirarHabitacion();
                     break;
@@ -111,6 +112,7 @@ public class Juego {
              Debe gestionar como mínimo: "ayuda", "mirar", "inventario",
              "ir derecha", "ir izquierda", "coger [objeto]" y "salir".
              */
+
 
 
         }
@@ -146,6 +148,31 @@ public class Juego {
             System.out.println("No hay objetos en esta habitacion.");
         }
         System.out.println();
+    }
+
+    /*
+    En este método irá a la habitación que esté a la izquierda no importe el lugar siempre que se introduzca el comando
+     */
+    public static void irIzquierda(){
+        if (habitacionActual==1){
+            habitacionActual--;
+            System.out.println("Te mueves a la izquierda");
+            System.out.println(habitaciones[habitacionActual]);
+            return;
+        }
+       if (habitacionActual==2){
+           habitacionActual--;
+           System.out.println("Te mueves a la izquierda");
+           System.out.println(habitaciones[habitacionActual]);
+           return;
+       }
+
+        if (habitacionActual==0){
+            habitacionActual=habitacionActual+2;
+            System.out.println("Te mueves a la izquierda");
+            System.out.println(habitaciones[habitacionActual]);
+            return;
+        }
     }
 
     /*
