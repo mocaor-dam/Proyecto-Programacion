@@ -89,6 +89,17 @@ public class Juego {
                 case "salir":
                     jugando = false;
                     break;
+
+                default:
+                    // Manejo de comandos complejos como 'coger llave'
+                    if (comando.startsWith("coger ")) {
+                        // TODO: Aquí va la lógica para coger objetos
+                        String objeto = comando.substring(6); // Obtiene lo que está después de "coger "
+                        System.out.println("Intentas coger: " + objeto + " (TODO: Implementar lógica)");
+                    } else {
+                        System.out.println("Comando no reconocido. Escribe 'ayuda' para ver las opciones.");
+                    }
+                    break;
             }
 
 
