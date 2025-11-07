@@ -154,20 +154,20 @@ public class Juego {
         if (habitacionActual==1){
             habitacionActual--;
             System.out.println("Te mueves a la izquierda");
-            System.out.println(Arrays.toString(habitaciones));
+            System.out.println(habitaciones[habitacionActual]);
             return;
         }
        if (habitacionActual==2){
            habitacionActual--;
            System.out.println("Te mueves a la izquierda");
-           System.out.println(Arrays.toString(habitaciones));
+           System.out.println(habitaciones[habitacionActual]);
            return;
        }
 
         if (habitacionActual==0){
             habitacionActual=habitacionActual+2;
             System.out.println("Te mueves a la izquierda");
-            System.out.println(Arrays.toString(habitaciones));
+            System.out.println(habitaciones[habitacionActual]);
             return;
         }
     }
