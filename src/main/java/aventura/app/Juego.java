@@ -69,9 +69,16 @@ public class Juego {
             String comando = scanner.nextLine().toLowerCase();
             switch (comando){
 
+                case "ayuda":
+                    System.out.println("Comandos disponibles: 'ir derecha', 'ir izquierda', 'mirar', 'inventario', 'coger [objeto]', 'salir'.");
+                    break;
+
                 case "ir derecha":
                     irDerecha(); // Llama al metodo de movimiento implementado
                     break;
+                case "ir izquierda":
+                    //TODO: Aqui tiene que ir el metodo de ir izquierda
+                    System.out.println("No disponible por el momento");
             }
 
 
