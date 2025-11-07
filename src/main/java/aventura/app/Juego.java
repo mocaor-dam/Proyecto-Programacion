@@ -13,6 +13,7 @@ public class Juego {
     // --- NÚCLEO: Definición de Datos (FASE 1) ---
     // Esta parte os la damos HECHA. Es el "contrato" del núcleo.
 
+
     private static String descripcionJuego = "Estás en tu apartamento. Son las 10 de la mañana, pero todo está sumido en una oscuridad extraña, como si el sol nunca hubiera salido. " +
             "Sientes un frío en el aire, algo fuera de lugar. Te acercas a la ventana y miras afuera. La calle está vacía... pero hay figuras moviéndose lentamente, con movimientos torpes, sin rumbo ni sentido, como si no tuvieran conciencia. Sus ojos parecen vacíos, y un silencio inquietante cubre todo. " +
             "Un escalofrío recorre tu espalda, pero intentas convencerte de que es una especie de tormenta o un apagón. Te preparas para salir y asistir a tu clase de programación, pero algo dentro de ti dice que hoy no será un día normal.\n" +
@@ -72,6 +73,7 @@ public class Juego {
                 case "ir derecha":
                     irDerecha(); // Llama al metodo de movimiento implementado
                     break;
+
             }
 
 
@@ -92,7 +94,9 @@ public class Juego {
     }
 
     public static void irDerecha(){
+        if (){
 
+        }
         if (habitacionActual < habitaciones.length -1){
             //Aumentamos la posicion actual
             habitacionActual++;
@@ -100,6 +104,15 @@ public class Juego {
             System.out.println(Arrays.toString(habitaciones));
         }
     }
+    public static void irIzquierda(){
+        if (){
+
+        }
+        if (habitacionActual<habitaciones.length -1){
+
+        }
+    }
+
 
     /*
     (Opcional - Buenas Prácticas)
@@ -108,4 +121,5 @@ public class Juego {
     private static void procesarComandoCoger(String comando) { ... }
     private static void mostrarInfoHabitacion() { ... }
     */
+
 }
