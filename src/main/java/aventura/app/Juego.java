@@ -150,6 +150,9 @@ public class Juego {
         System.out.println();
     }
 
+    /*
+    En este método irá a la habitación que esté a la izquierda no importe el lugar siempre que se introduzca el comando
+     */
     public static void irIzquierda(){
         if (habitacionActual==1){
             habitacionActual--;
