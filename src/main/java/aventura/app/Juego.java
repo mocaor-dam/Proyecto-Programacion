@@ -108,6 +108,11 @@ public class Juego {
     public static void irIzquierda(){
         if (habitacionActual==0){
             System.out.println("Ves la ventana que da a la calle");
+            return;
+        }
+        if (habitacionActual==3){
+            System.out.println("Ves una pared");
+            return;
         }
         if (habitacionActual<habitaciones.length -1){
             habitacionActual++;
