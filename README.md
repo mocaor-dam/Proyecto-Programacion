@@ -1,4 +1,4 @@
-# 🚀 Proyecto: NIGHT CLASS
+# 🚀 Proyecto: The Blackout
 
 **Miembros del Equipo:**
 * [Moisés]
@@ -8,13 +8,16 @@
 
 ## 📖 Nuestra Historia (El "Skin")
 
-**Temática del Juego:** Escape / Misterio en el Instituto.
+**Temática del Juego:** Escape / Misterio en unos apartamentos, en un mundo a oscuras.
 
 **Premisa:**
-> No sabes qué ha pasado. Justo cuando terminabas las clases te quedaste el último como siempre recogiendo tus cosas. Pero algo pasó. Lo último que recuerdas es que sentiste mucho frío y todo se volvió oscuro. Ahora estás en tu clase, pero es de noche y el instituto está cerrado. ¿Nadie te ha visto? ¿Por qué las limpiadoras no te han despertado?
+> Estás en tu apartamento. Son las 10 de la mañana, pero todo está sumido en una oscuridad extraña, como si el sol nunca hubiera salido. 
+Sientes un frío en el aire, algo fuera de lugar. Te acercas a la ventana y miras afuera. La calle está vacía... pero hay figuras moviéndose lentamente, con movimientos torpes, sin rumbo ni sentido, como si no tuvieran conciencia. Sus ojos parecen vacíos, y un silencio inquietante cubre todo.
+Un escalofrío recorre tu espalda, pero intentas convencerte de que es una especie de tormenta o un apagón. Te preparas para salir y asistir a tu clase de programación, pero algo dentro de ti dice que hoy no será un día normal.
+Mientras apagas la luz y agarras tu mochila, percibes un leve susurro que parece venir de las paredes.
 
 **Objetivo:**
-Descubrir qué ha pasado y encontrar una forma de salir del instituto.
+Descubrir qué ha pasado y encontrar una solucion, e intentar contactar con alguien cuerdo.
 
 ---
 
