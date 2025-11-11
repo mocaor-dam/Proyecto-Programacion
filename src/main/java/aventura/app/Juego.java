@@ -217,7 +217,17 @@ public class Juego {
             }
         }
 
-       
+        //Procesar el resultado
+        if (indiceObjetoEnSala != -1) {
+            // Encontrado: Añadir al inventario y quitar de la sala
+            inventario[indiceInventario] = objetosEnSala[indiceObjetoEnSala]; // Añadir
+            objetosMapa[habitacionActual][indiceObjetoEnSala] = null;        // Quitar
+            System.out.println("¡Has cogido '" + objeto + "' y lo has añadido a tu inventario!");
+        } else {
+            // No encontrado
+            System.out.println("No ves ningún '" + objeto + "' por aquí para coger.");
+        }
+    }
 
     }
 
