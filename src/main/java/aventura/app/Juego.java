@@ -181,7 +181,15 @@ public class Juego {
         System.out.println("------INVENTARIO------");
         boolean estaVacio = true;
         for (String objeto : inventario) {
-
+            if (objeto != null) {
+                System.out.println("- " + objeto);
+                estaVacio = false;
+            }
+        }
+        if (estaVacio) {
+            System.out.println("Tu inventario está vacío.");
+        }
+        System.out.println("--------------------");
 
     }
 
