@@ -32,9 +32,9 @@ public class Juego {
 
     // Los objetos que hay en cada habitación.
     private static String[][] objetosMapa = {
-            {"llave", "radio"},      // Objetos en Apartamento 101
+            {"llave", null},      // Objetos en Apartamento 101
             {"linterna", null},        // Objetos en Apartamento 100
-            {null, null},           // Objetos en Apartamento 102
+            {"radio", null},           // Objetos en Apartamento 102
     };
 
     // El inventario del jugador. Tamaño fijo.
@@ -97,13 +97,13 @@ public class Juego {
                 default:
                     // Manejo de comandos complejos como 'coger llave'
                     if (comando.startsWith("coger ")) {
-                        // TODO: Aquí va la lógica para coger objetos
                         String objeto = comando.substring(6); // Obtiene lo que está después de "coger "
-                        System.out.println("Intentas coger: " + objeto + " (TODO: Implementar lógica)");
+                        procesarComandoCoger(objeto); // Llama al metodo procesarComandoCoger
                     } else {
                         System.out.println("Comando no reconocido. Escribe 'ayuda' para ver las opciones.");
                     }
                     break;
+
             }
 
 
@@ -239,4 +239,3 @@ public class Juego {
     private static void mostrarInfoHabitacion() { ... }
     */
 
-}
