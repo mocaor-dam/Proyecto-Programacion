@@ -32,9 +32,9 @@ public class Juego {
 
     // Los objetos que hay en cada habitación.
     private static String[][] objetosMapa = {
-            {"llave", "radio"},      // Objetos en Apartamento 101
+            {"llave", null},      // Objetos en Apartamento 101
             {"linterna", null},        // Objetos en Apartamento 100
-            {null, null},           // Objetos en Apartamento 102
+            {"radio", null},           // Objetos en Apartamento 102
     };
 
     // El inventario del jugador. Tamaño fijo.
@@ -97,13 +97,13 @@ public class Juego {
                 default:
                     // Manejo de comandos complejos como 'coger llave'
                     if (comando.startsWith("coger ")) {
-                        // TODO: Aquí va la lógica para coger objetos
                         String objeto = comando.substring(6); // Obtiene lo que está después de "coger "
-                        System.out.println("Intentas coger: " + objeto + " (TODO: Implementar lógica)");
+                        procesarComandoCoger(objeto); // Llama al metodo procesarComandoCoger
                     } else {
                         System.out.println("Comando no reconocido. Escribe 'ayuda' para ver las opciones.");
                     }
                     break;
+
             }
 
 
@@ -192,6 +192,44 @@ public class Juego {
         System.out.println("--------------------");
 
     }
+    public static void procesarComandoCoger(String objeto){
+        //Verificamos si el inventario tiene espacio (busca el primer hueco null)
+        int indiceInventario = -1;
+        for (int i = 0; i < inventario.length; i++) {
+            if (inventario[i] == null){
+                indiceInventario = i;
+                break;
+            }
+
+        }
+        if (indiceInventario == -1){
+            System.out.println("Tu inventario esta lleno.");
+            return;
+        }
+        // Buscar el objeto en la sala actual
+        String[] objetosEnSala = objetosMapa[habitacionActual];
+        int indiceObjetoEnSala = -1;
+        for (int i = 0; i < objetosEnSala.length; i++) {
+            // Compara el objeto ignorando mayúsculas y minúsculas
+            if (objetosEnSala[i] != null && objetosEnSala[i].equalsIgnoreCase(objeto)) {
+                indiceObjetoEnSala = i;
+                break;
+            }
+        }
+
+        //Procesar el resultado
+        if (indiceObjetoEnSala != -1) {
+            // Encontrado: Añadir al inventario y quitar de la sala
+            inventario[indiceInventario] = objetosEnSala[indiceObjetoEnSala]; // Añadir
+            objetosMapa[habitacionActual][indiceObjetoEnSala] = null;        // Quitar
+            System.out.println("¡Has cogido '" + objeto + "' y lo has añadido a tu inventario!");
+        } else {
+            // No encontrado
+            System.out.println("No ves ningún '" + objeto + "' por aquí para coger.");
+        }
+    }
+
+    }
 
     /*
     (Opcional - Buenas Prácticas)
@@ -201,4 +239,3 @@ public class Juego {
     private static void mostrarInfoHabitacion() { ... }
     */
 
-}
