@@ -88,7 +88,7 @@ public class Juego {
                     mirarHabitacion();
                     break;
                 case "inventario":
-                    //TODO: Aqui va el metodo de inventario
+                    mostrarInventario();
                     break;
                 case "salir":
                     jugando = false;
@@ -153,7 +153,7 @@ public class Juego {
     }
 
     /*
-    En este método irá a la habitación que esté a la izquierda no importe el lugar siempre que se introduzca el comando
+    En este metodo irá a la habitación que esté a la izquierda no importe el lugar siempre que se introduzca el comando
      */
     public static void irIzquierda(){
         if (habitacionActual==1){
@@ -175,6 +175,14 @@ public class Juego {
             System.out.println(habitaciones[habitacionActual]);
             return;
         }
+    }
+//Metodo de mostrar el inventario
+    public static void mostrarInventario(){
+        System.out.println("------INVENTARIO------");
+        boolean estaVacio = true;
+        for (String objeto : inventario) {
+
+
     }
 
     /*
