@@ -206,6 +206,18 @@ public class Juego {
             System.out.println("Tu inventario esta lleno.");
             return;
         }
+        // Buscar el objeto en la sala actual
+        String[] objetosEnSala = objetosMapa[habitacionActual];
+        int indiceObjetoEnSala = -1;
+        for (int i = 0; i < objetosEnSala.length; i++) {
+            // Compara el objeto ignorando mayúsculas y minúsculas
+            if (objetosEnSala[i] != null && objetosEnSala[i].equalsIgnoreCase(objeto)) {
+                indiceObjetoEnSala = i;
+                break;
+            }
+        }
+
+       
 
     }
 
