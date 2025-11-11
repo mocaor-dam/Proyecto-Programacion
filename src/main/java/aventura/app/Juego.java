@@ -24,7 +24,7 @@ public class Juego {
     private static String[] habitaciones = {
             "Estás en el apartamento 101. Hay una 'llave' en una mesa, y escuchas un ruido extraño debajo de la mesa, miras y ves una antigua 'radio'.", // Posición 1
             "Estás en tu apartamento, el 100. Hay puertas a la DERECHA y a la IZQUIERDA. Los apartamentos 101 y 102.",  // Posición 0
-            "Estás en el apartamento 102. Hay un cofre con una cerradura para una llave. \n escuchas que la radio empieza a hacer ruidos extraños... \n ¨MHASDAMDmasndb...¨ Es ilegible.." //Posición 2
+            "Estás en el apartamento 102. Hay un cofre con una cerradura para una llave. \n te das cuenta de que hay una radio que empieza a hacer ruidos extraños... \n ¨MHASDAMDmasndb...¨ Es ilegible.." //Posición 2
 
     };
 
