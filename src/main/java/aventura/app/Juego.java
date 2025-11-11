@@ -20,7 +20,6 @@ public class Juego {
 
 
     // El mapa de habitaciones.
-    // TODO: (Skin) ¡Rellenad esto con vuestras descripciones!
     private static String[] habitaciones = {
             "Estás en el apartamento 101. Hay una 'llave' en una mesa, y escuchas un ruido extraño debajo de la mesa, miras y ves una antigua 'radio'.", // Posición 1
             "Estás en tu apartamento, el 100. Hay puertas a la DERECHA y a la IZQUIERDA. Los apartamentos 101 y 102.",  // Posición 0
@@ -53,17 +52,16 @@ public class Juego {
         System.out.println("¡Bienvenido a 'TU PROPIA AVENTURA'!");
         System.out.println("------------------------------------------");
 
-        // TODO 1a: Muestra la descripción general del juego
         System.out.println("Hola Bienvenido a The Blackout, un juego realizado por Moises y Victor, espero que disfrutes");
+        System.out.println("---------------THE BLACKOUT---------------");
         System.out.println(descripcionJuego);
-        // TODO 1b: Muestra la descripción de la primera habitación
-        // Pista: System.out.println(habitaciones[...]);
+        // Muestra la descripción de la primera habitación
         System.out.println(habitaciones[habitacionActual]);
 
-        // TODO 2: Iniciar el bucle principal del juego (game loop)
+        // Iniciar el bucle principal del juego (game loop)
         while (jugando) {
 
-            // TODO 3: Leer el comando del usuario por teclado
+            // Leer el comando del usuario por teclado
             System.out.print("\n> ");
             System.out.println("Introduce que quieres hacer:  ");
             String comando = scanner.nextLine().toLowerCase();
@@ -106,12 +104,7 @@ public class Juego {
 
 
 
-            /*
-             4: Crear un 'switch' o una estructura 'if-else if'
-             para procesar el 'comando' del usuario.
-             Debe gestionar como mínimo: "ayuda", "mirar", "inventario",
-             "ir derecha", "ir izquierda", "coger [objeto]" y "salir".
-             */
+
 
 
 
