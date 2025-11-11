@@ -192,6 +192,22 @@ public class Juego {
         System.out.println("--------------------");
 
     }
+    public static void procesarComandoCoger(String objeto){
+        //Verificamos si el inventario tiene espacio (busca el primer hueco null)
+        int indiceInventario = -1;
+        for (int i = 0; i < inventario.length; i++) {
+            if (inventario[i] == null){
+                indiceInventario = i;
+                break;
+            }
+
+        }
+        if (indiceInventario == -1){
+            System.out.println("Tu inventario esta lleno.");
+            return;
+        }
+
+    }
 
     /*
     (Opcional - Buenas Prácticas)
